@@ -1,6 +1,7 @@
 .body {
   display: flex;
   margin: 0;
+  height: 100vh;
   font-family: Comic, sans-serif;
   color: $text;
   flex-direction: column;
@@ -9,15 +10,17 @@
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
+  padding: 3px;
 
   .body__page {
+    position: relative;
     box-sizing: border-box;
     min-width: $razmerw;
+    width: $razmerw * 1.1;
     height: $razmerh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 5px solid tomato;
     background: $bgColor;
 
     @media (min-width: 640px) {
@@ -27,5 +30,48 @@
     @media (min-width: 960px) {
       min-width: $razmerw;
     }
+  }
+
+  .body__img {
+    width: $razmerw * 0.6;
+    border-radius: 5px;
+  }
+
+  .body__avtor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+  }
+
+  .body__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+    animation: heartbeat 1.5s infinite;
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    filter: drop-shadow(6px 6px 20px gold);
+  }
+  20% {
+    filter: drop-shadow(6px 6px 50px gold);
+  }
+  40% {
+    filter: drop-shadow(16px 16px 20px gold);
+  }
+  60% {
+    filter: drop-shadow(16px 16px 50px gold);
+  }
+  80% {
+    filter: drop-shadow(16px 16px 20px gold);
+  }
+  100% {
+    filter: drop-shadow(16px 16px 50px gold);
   }
 }
