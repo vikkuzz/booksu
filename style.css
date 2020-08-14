@@ -19,7 +19,7 @@
     align-items: center;
     border: 5px solid tomato;
     background: #24292e; }
-    @media (min-width: 640px) {
+    @media (min-width: 640px) and (orientation: landscape) {
       .body .body__page {
         min-width: 77vmin;
         height: 100.1vmin; } }
