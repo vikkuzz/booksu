@@ -21,7 +21,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #24292e; }
+    background: #24292e;
+    transform-origin: left;
+    transition: all 1s; }
     @media (min-width: 640px) {
       .body .body__page {
         min-width: 90vmin;
@@ -43,9 +45,17 @@
     justify-content: center;
     align-items: center;
     height: 30%;
-    width: 100%;
-    -webkit-animation: heartbeat 1.5s infinite;
-            animation: heartbeat 1.5s infinite; }
+    width: 100%; }
+    .body .body__title .body__title:hover {
+      -webkit-animation: heartbeat 1.5s infinite;
+              animation: heartbeat 1.5s infinite; }
+  .body .body__read {
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-family: inherit;
+    color: inherit; }
 
 @-webkit-keyframes heartbeat {
   0% {
