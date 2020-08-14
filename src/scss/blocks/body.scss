@@ -1,7 +1,7 @@
 .body {
   display: flex;
   margin: 0;
-  height: 100vh;
+  height: 100%;
   font-family: Comic, sans-serif;
   color: $text;
   flex-direction: column;
@@ -24,14 +24,6 @@
     background: $bgColor;
     transform-origin: left;
     transition: all 1s;
-
-    @media (min-width: 640px) {
-      min-width: $razmerw;
-      height: $razmerh;
-    }
-    @media (min-width: 960px) {
-      min-width: $razmerw;
-    }
   }
 
   .body__img {
@@ -67,6 +59,21 @@
     border: none;
     font-family: inherit;
     color: inherit;
+  }
+
+  .body__text {
+    position: absolute;
+    box-sizing: border-box;
+    min-width: $razmerw;
+    width: $razmerw;
+    height: $razmerh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url("../img/левая.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
   }
 }
 
