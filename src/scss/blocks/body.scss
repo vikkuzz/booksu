@@ -20,7 +20,7 @@
     border: 5px solid tomato;
     background: $bgColor;
 
-    @media (min-width: 640px) {
+    @media (min-width: 640px) and (orientation: landscape) {
       min-width: $razmerw;
       height: $razmerh;
     }
