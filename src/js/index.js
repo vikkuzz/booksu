@@ -1,3 +1,4 @@
-import '../scss/style.scss';
+import "../scss/style.scss";
+import "./js-files/open";
 
-console.log('Works!');
+console.log("Works!");
