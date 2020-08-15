@@ -61,7 +61,11 @@
     align-items: center;
     background: url(./static/левая.jpg);
     background-repeat: no-repeat;
-    z-index: -1; }
+    z-index: -1;
+    color: black; }
+  .body .body__content-text {
+    width: 100%;
+    height: 100%; }
   .body .body__btns {
     width: 100%;
     display: flex;
