@@ -64,16 +64,22 @@
   .body__text {
     position: absolute;
     box-sizing: border-box;
+    padding: 10px 20px 10px 40px;
     min-width: $razmerw;
     width: $razmerw;
     height: $razmerh;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     background: url("../img/левая.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    //background-size: contain;
     z-index: -1;
+  }
+  .body__btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
