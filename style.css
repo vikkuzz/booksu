@@ -52,16 +52,20 @@
   .body .body__text {
     position: absolute;
     box-sizing: border-box;
+    padding: 10px 20px 10px 40px;
     min-width: 90vmin;
     width: 90vmin;
     height: 117vmin;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     background: url(./static/левая.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
     z-index: -1; }
+  .body .body__btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
 
 @-webkit-keyframes heartbeat {
   0% {
