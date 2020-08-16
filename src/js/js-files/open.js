@@ -685,13 +685,16 @@ let arrbook = `
 let btn = document.querySelector(".body__read");
 let page = document.querySelector(".body__page");
 let nextPage = document.querySelector(".body__next");
+let backPage = document.querySelector(".body__back");
 let curPage = 1;
 let pageText = document.querySelector(".body__content-text");
 let bodyText = document.querySelector(".body__text");
 
 btn.addEventListener("click", function () {
   page.style.transform = "rotateY(-90deg) skewY(-10deg)";
-  bodyText.style["z-index"] = "10";
+  setTimeout(function () {
+    bodyText.style["z-index"] = "10";
+  }, 2000);
 });
 
 function numOfSh() {
@@ -713,10 +716,23 @@ numOfSh();
 nextPage.addEventListener("click", function () {
   curPage++;
   let numsymb = pageText.clientWidth / 13;
-  let numstr = pageText.clientHeight / 16;
+  let numstr = pageText.clientHeight / 17;
   let index = numsymb * numstr * curPage;
   let num = index + numsymb * numstr;
   let text = arrbook.slice(index, num);
+  pageText.textContent = text;
+  console.log(num);
+
+  console.log(curPage);
+});
+
+backPage.addEventListener("click", function () {
+  curPage--;
+  let numsymb = pageText.clientWidth / 13;
+  let numstr = pageText.clientHeight / 17;
+  let index = numsymb * numstr * curPage;
+  let num = index - numsymb * numstr;
+  let text = arrbook.slice(num, index);
   pageText.textContent = text;
   console.log(num);
 
